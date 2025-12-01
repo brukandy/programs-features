@@ -215,6 +215,30 @@ body {
     background: white;
 }
 
+.process-card-front::after {
+    content: '↻';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #132E55 0%, #1a4173 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover .process-card-front::after {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
 .process-card-back {
     background: white;
     transform: rotateY(180deg);
@@ -350,6 +374,14 @@ body {
         padding: 32px 24px;
     }
 
+    .process-card-front::after {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        top: 12px;
+        right: 12px;
+    }
+
     .process-number {
         font-size: 56px;
     }
@@ -396,6 +428,14 @@ body {
     .process-card-front,
     .process-card-back {
         padding: 24px 20px;
+    }
+
+    .process-card-front::after {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        top: 10px;
+        right: 10px;
     }
 
     .process-number {
