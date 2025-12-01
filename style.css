@@ -39,12 +39,6 @@ body {
     gap: 8px;
 }
 
-.title-number {
-    font-size: 24px;
-    font-weight: 600;
-    color: #C9A55A;
-}
-
 .title-main {
     font-weight: 400;
     color: #1a2332;
@@ -247,10 +241,6 @@ body {
 
     .section-title {
         font-size: 32px;
-    }
-
-    .title-number {
-        font-size: 20px;
     }
 
     .section-subtitle {
