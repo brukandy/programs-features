@@ -61,6 +61,15 @@ body {
     margin-top: 100px;
 }
 
+/* Seconda sezione - colori originali */
+.section-process .title-main {
+    color: #1a2332;
+}
+
+.section-process .title-highlight {
+    color: #132E55;
+}
+
 /* Features Bento Grid - 5 Cards Asymmetric */
 .features-grid {
     display: grid;
