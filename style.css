@@ -135,7 +135,7 @@ body {
 }
 
 .card-content-wrapper {
-    padding: 32px;
+    padding: 32px 32px 20px 32px;
     flex: 1;
 }
 
@@ -310,11 +310,12 @@ body {
 /* Responsive - Mobile Portrait */
 @media (max-width: 768px) and (orientation: portrait) {
     .programs-container {
-        padding: 40px 20px;
+        padding: 40px 0;
     }
 
     .section-header {
         margin-bottom: 40px;
+        padding: 0 20px;
     }
 
     .section-title {
@@ -326,9 +327,24 @@ body {
     }
 
     .features-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        grid-template-columns: none;
         gap: 16px;
         margin-bottom: 60px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .features-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .feature-card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
     }
 
     .card-image-wrapper {
@@ -336,7 +352,7 @@ body {
     }
 
     .card-content-wrapper {
-        padding: 24px 20px;
+        padding: 24px 20px 16px 20px;
     }
 
     .card-icon {
@@ -359,6 +375,7 @@ body {
 
     .section-process {
         margin-top: 60px;
+        padding: 0 20px;
     }
 
     .process-grid {
@@ -398,7 +415,11 @@ body {
 /* Responsive - Mobile Small */
 @media (max-width: 480px) {
     .programs-container {
-        padding: 32px 16px;
+        padding: 32px 0;
+    }
+
+    .section-header {
+        padding: 0 16px;
     }
 
     .section-title {
@@ -409,8 +430,16 @@ body {
         font-size: 15px;
     }
 
+    .features-grid {
+        padding: 0 16px;
+    }
+
     .feature-card {
-        padding: 24px 20px;
+        flex: 0 0 90%;
+    }
+
+    .card-content-wrapper {
+        padding: 20px 16px 12px 16px;
     }
 
     .card-title {
@@ -419,6 +448,10 @@ body {
 
     .card-description {
         font-size: 14px;
+    }
+
+    .section-process {
+        padding: 0 16px;
     }
 
     .process-card {
