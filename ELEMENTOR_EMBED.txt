@@ -1,0 +1,68 @@
+CODICE PER ELEMENTOR - PROGRAMS FEATURES
+=========================================
+
+Copia e incolla in un widget HTML di Elementor:
+
+<style>
+/* Reset padding Elementor */
+.elementor-widget-html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.elementor-widget-container {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Iframe responsive wrapper */
+.programs-features-iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 1400px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .programs-features-iframe-wrapper {
+        height: 2200px !important;
+    }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .programs-features-iframe-wrapper {
+        height: 2000px !important;
+    }
+}
+</style>
+
+<div class="programs-features-iframe-wrapper">
+    <iframe 
+        src="https://brukandy.github.io/programs-features/" 
+        width="100%" 
+        height="100%" 
+        frameborder="0"
+        scrolling="no"
+        style="border: none; display: block; margin: 0; padding: 0; overflow: hidden;">
+    </iframe>
+</div>
+
+<script>
+// Auto-resize iframe based on content
+window.addEventListener('message', function(e) {
+    if (e.data.programsHeight) {
+        const iframe = document.querySelector('iframe[src*="programs-features"]');
+        if (iframe) {
+            iframe.style.height = e.data.programsHeight + 'px';
+        }
+    }
+});
+</script>
+
+---
+
+URL GITHUB PAGES: https://brukandy.github.io/programs-features/
+
+ALTEZZE:
+- Desktop: 1400px (auto-resize via postMessage)
+- Mobile Portrait (768px): 2200px
+- Mobile Small (480px): 2000px
