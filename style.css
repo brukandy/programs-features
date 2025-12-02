@@ -45,7 +45,7 @@ body {
 }
 
 .title-highlight {
-    font-weight: 800;
+    font-weight: 600;
     color: #C9A55A;
 }
 
@@ -384,11 +384,11 @@ body {
 
     .section-process {
         margin-top: 60px;
-        padding: 0 20px;
+        padding: 0 24px;
     }
 
     .process-grid {
-        gap: 16px;
+        gap: 24px;
     }
 
     .process-card {
